@@ -1,8 +1,101 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    ViewData["Title"] = "Index";
 }
+<div class="row">
+    <div class="col-md-6">
+        <!--chat dialog-->
+        <div class="card text-center" id="chatDialog" style="display: none;">
+            <div class="card-header text-white bg-primary">
+                Chat dialog
+            </div>
+            <div class="card-body">
+                <form action="/" method="post" id="ChatForm">
+                    <div class="row">
+                        <div class=" col-md-1"></div>
+                        <div class=" col-md-8">
+                            <input type="text" class="form-control" id="MessageBox"
+                                   placeholder="Please type your message" />
+                        </div>
+                        <div class=" col-md-2">
+                            <input type="submit" id="SendMessge" value="Send" class="btn btn-success" />
+                        </div>
+                        <div class=" col-md-1"></div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <!--user info dialog-->
+        <div class="card text-center" id="userInfo">
+            <div class="card-header text-white bg-primary">
+                user info dialog
+            </div>
+            <div class="card-body">
+                <form action="/" method="post" id="userInfoForm">
+                    <div class="row">
+                        <div class=" col-md-1"></div>
+                        <div class=" col-md-8">
+                            <input type="text" class="form-control" id="nameBox"
+                                   placeholder="Please type your name" required/>
+                        </div>
+                        <div class=" col-md-2">
+                            <input type="submit" id="connect" value="Send" class="btn btn-success"/>
+                        </div>
+                        <div class=" col-md-1"></div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!--chat history-->
+    <div class="col-md-6">
+        <div class="card text-center">
+            <div class="card-header text-white bg-success">
+                Chat history
+            </div>
+            <div class="card-body">
+                <div class="container mt-3" id="chatHistory">
+                    <!--messages come here-->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--modal-->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              
+                <!-- Modal Header -->
+                @*<div class="modal-header">
+                  
+                </div>*@
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <h5>Connecting......</h5>
+                </div>
+                
+                <!-- Modal footer -->
+                
+                
+            </div>
+        </div>
+    </div>
+
 </div>
+
+
+
+@section Scripts
+{
+
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="~/lib/moment.js/moment.js"></script>
+    <script src="~/js/chat.js"></script>
+}
