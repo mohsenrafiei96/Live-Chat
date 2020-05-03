@@ -33,6 +33,7 @@ namespace LiveChat.Hubs
                 SenderName = Context.User.Identity.Name,
                 Text = text
             };
+            await _chatRoomService.AddMessage(roomId, message);
             await _chatHubContext.Clients.Group(roomId.ToString()).SendAsync("ReceiveMessage",
                 message.SenderName, message.Text, message.SendAt);
         }
