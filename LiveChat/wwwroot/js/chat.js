@@ -80,7 +80,9 @@ function renderMessage(senderName, text, sendAt) {
     messageBody += '<p>' + text + '</p>';
     messageBody += '</div></div>';
     var chatHistory = document.getElementById('chatHistory');
-    chatHistory.insertAdjacentHTML('beforeend',messageBody);
+    chatHistory.insertAdjacentHTML('beforeend', messageBody);
+    window.scrollBy(0, 70);
+
 }
 
 

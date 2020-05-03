@@ -129,6 +129,7 @@ function appendMessages(senderName, text, sendAt) {
         moment(sendAt).format('H:mm') + '</p></div>';
     
     chatBox.insertAdjacentHTML('beforeend', messageBody);   
+    chatBox.scrollTop = chatBox.scrollHeight - chatBox.clientHeight;
 }
 
 
