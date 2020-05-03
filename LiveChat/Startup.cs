@@ -67,6 +67,16 @@ namespace LiveChat
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+            //if client application use another domain, You must user cross origins
+            //app.UseCors(builder =>
+            //{
+            //    builder.WithOrigins("http://www.google.com")
+            //        .AllowAnyHeader()
+            //        .WithMethods("GET", "POST")
+            //        .AllowCredentials();
+            //});
+
             app.UseAuthentication();
 
             //define endpoint address for clients app
