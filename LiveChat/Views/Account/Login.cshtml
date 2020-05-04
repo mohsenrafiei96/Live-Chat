@@ -10,15 +10,15 @@
     
     <form asp-action="Login" method="post">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4  mt-3 mt-md-0">
                 <input type="text" asp-for="UserName" class="form-control" placeholder="Enter username"/>
                 <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mt-3 mt-md-0">
                 <input type="password" asp-for="Password" class="form-control" placeholder="Enter Password" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mt-3 mt-md-0">
                 <input type="submit" class="btn btn-success" value="Login"/>
             </div>
         </div>
