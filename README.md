@@ -16,5 +16,3 @@ In this simple project the client application is javascritp, you can use java,sw
 
 For more information use this link https://docs.microsoft.com/en-us/aspnet/core/signalr/dotnet-client?view=aspnetcore-2.2&tabs=visual-studio
 
-## Update
-This source code will update in summer of 2020 
